@@ -1,0 +1,11 @@
+{
+  "debug": true,
+  "timeout": 30,
+  "env": "test",
+  "clientId": "YOUR_CLIENT_ID",
+  "clientSecret": "YOUR_CLIENT_SECRET",
+  "accountNumber": "XXXXXX",
+  "transactionSrc": "ups-go",
+  "version": "v2409",
+  "labelVersion": "v1"
+}
