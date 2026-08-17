@@ -52,7 +52,7 @@ result, err := client.Services.Shipment.Create(ctx, ups.CreateShipmentRequest{
                 City:              "TIMONIUM",
                 StateProvinceCode: null.StringFrom("MD"),
                 PostalCode:        null.StringFrom("21093"),
-                CountryCode:       "US",
+                CountryCode:       "CN", // 须与 ShipperNumber 账号所属国家一致
             },
         },
         ShipTo: ups.ShipTo{ /* ... */ },

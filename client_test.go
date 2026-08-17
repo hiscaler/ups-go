@@ -10,8 +10,12 @@ import (
 	"github.com/hiscaler/ups-go/config"
 )
 
-var client *Client
-var ctx = context.Background()
+var (
+	client                   *Client
+	ctx                      = context.Background()
+	integrationAccountNumber string
+	integrationEnv           string
+)
 
 func TestMain(m *testing.M) {
 	b, err := os.ReadFile("./config/config.json")
@@ -25,6 +29,8 @@ func TestMain(m *testing.M) {
 	}
 	if cfg.ClientID != "" && cfg.ClientID != "YOUR_CLIENT_ID" {
 		client = NewClient(ctx, cfg)
+		integrationAccountNumber = cfg.AccountNumber
+		integrationEnv = cfg.Env
 	} else {
 		fmt.Println("integration client disabled: placeholder credentials")
 	}
